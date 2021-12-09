@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: NeuMapper
+description: A scalable Mapper algorithm for neuroimaging data analysis.
+show_downloads: "true"
