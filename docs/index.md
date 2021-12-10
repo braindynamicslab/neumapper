@@ -87,7 +87,7 @@ options.show_embed = true;
 res = neumapper(X, options);
 ```
 
-<p align="center"><img src="../examples/trefoil_knot/trefoil_knot_neumapper.png?raw=true"></p>
+<p align="center"><img src="./assets/trefoil_knot_neumapper.png?raw=true"></p>
 
 
 
@@ -174,7 +174,7 @@ options.labels = labels;
 res = neumapper(X, options);
 ```
 
-<p align="center"><img src="../examples/haxby_decoding/haxby_decoding_neumapper.png?raw=true"></p>
+<p align="center"><img src="./assets/haxby_decoding_neumapper.png?raw=true"></p>
 
 
 
@@ -242,7 +242,7 @@ dG = DyNeuGraph(G=graph, y=timing_onehot)
 dG.visualize('haxby_decoding_neumapper_dyneusr.html')
 ```
 
-<p align="center"><img src="https://github.com/braindynamicslab/neumapper/blob/master/examples/haxby_decoding/haxby_decoding_neumapper_dyneusr.png?raw=true"></p>
+<p align="center"><img src="./assets/haxby_decoding_neumapper_dyneusr.png?raw=true"></p>
 
 
 
