@@ -3,7 +3,7 @@
 
 [NeuMapper](https://braindynamicslab.github.io/neumapper/) is a Matlab implementation of a scalable Mapper algorithm designed specifically for neuroimaging data analysis.
 
-<p align="center"><img src="https://raw.githubusercontent.com/braindynamicslab/neumapper/master/docs/assets/neumapper_pipeline.png" width="75%"></p>
+<p align="center"><img src="https://github.com/braindynamicslab/neumapper/blob/master/docs/assets/neumapper_pipeline.png?raw=true" width="75%"></p>
 
 Developed with neuroimaging data analysis in mind, NeuMapper implements a novel landmark-based intrinsic binning strategy that eliminates the need for dimensionality reduction. Rather than projecting the high-dimensional data to a low-dimensional embedding, NeuMapper stays in high-dimensional space and performs the binning directly on a reciprocal kNN graph. By using geodesic distances, NeuMapper is able to better captures the high-dimensional, non-linear structure underlying the dynamical landscape of brain activity.
 
@@ -87,7 +87,7 @@ options.show_embed = true;
 res = neumapper(X, options);
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/braindynamicslab/neumapper/master/examples/trefoil_knot/trefoil_knot_neumapper.png"></p>
+<p align="center"><img src="https://github.com/braindynamicslab/neumapper/blob/master/examples/trefoil_knot/trefoil_knot_neumapper.png?raw=true"></p>
 
 
 
@@ -174,7 +174,7 @@ options.labels = labels;
 res = neumapper(X, options);
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/braindynamicslab/neumapper/master/examples/haxby_decoding/haxby_decoding_neumapper.png"></p>
+<p align="center"><img src="https://github.com/braindynamicslab/neumapper/blob/master/examples/haxby_decoding/haxby_decoding_neumapper.png?raw=true"></p>
 
 
 
@@ -242,7 +242,7 @@ dG = DyNeuGraph(G=graph, y=timing_onehot)
 dG.visualize('haxby_decoding_neumapper_dyneusr.html')
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/braindynamicslab/neumapper/master/examples/haxby_decoding/haxby_decoding_neumapper_dyneusr.png"></p>
+<p align="center"><img src="https://github.com/braindynamicslab/neumapper/blob/master/examples/haxby_decoding/haxby_decoding_neumapper_dyneusr.png?raw=true"></p>
 
 
 
