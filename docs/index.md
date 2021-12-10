@@ -3,7 +3,7 @@
 
 [NeuMapper](https://braindynamicslab.github.io/neumapper/) is a Matlab implementation of a scalable Mapper algorithm designed specifically for neuroimaging data analysis.
 
-<p align="center"><img src="./assets/neumapper_pipeline.png?raw=true" width="75%"></p>
+<p align="center"><img src="./assets/neumapper_pipeline.png?raw=true" width="100%"></p>
 
 Developed with neuroimaging data analysis in mind, NeuMapper implements a novel landmark-based intrinsic binning strategy that eliminates the need for dimensionality reduction. Rather than projecting the high-dimensional data to a low-dimensional embedding, NeuMapper stays in high-dimensional space and performs the binning directly on a reciprocal kNN graph. By using geodesic distances, NeuMapper is able to better captures the high-dimensional, non-linear structure underlying the dynamical landscape of brain activity.
 
