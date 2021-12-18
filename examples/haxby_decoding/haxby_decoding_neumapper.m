@@ -1,5 +1,5 @@
 %% Configure paths
-addpath(genpath('~/neumapper/code/'));
+addpath(genpath('../../code/'));
 
 
 %% Load the data
