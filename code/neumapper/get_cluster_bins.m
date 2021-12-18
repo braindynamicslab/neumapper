@@ -40,8 +40,8 @@ for bin = 1:num_coverBins
         % Perform clustering
         [Z, cutoff] = find_cluster_cutoff(coverBin_dX, 10, 'single');
         cluster_indices_within_coverBin = cluster(Z, 'cutoff',cutoff, 'criterion','distance');
-        num_clusterBins_in_coverBin = max(cluster_indices_within_coverBin);
     end
+    num_clusterBins_in_coverBin = max(cluster_indices_within_coverBin);
     
     % Create cluster bins, using a separate pointer for cluster bin indices
     for j = 1:num_clusterBins_in_coverBin
