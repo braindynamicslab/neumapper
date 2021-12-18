@@ -1,5 +1,9 @@
 function [L, DL, R] = px_maxmin(varargin)
-
+% Function px_maxmin used for farthest point sampling
+% Original authors: Vin de Silva, Patrick Perry, and collaborators from the
+% Computational Topology working group at Stanford University. Please see
+% below for details, and credit the original authors if you use this code.
+% 
 %PX_MAXMIN -- select landmark points by greedy optimisation
 %
 % Given a set of N points, PX_MAXMIN selects a subset of n points called
