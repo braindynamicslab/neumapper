@@ -1,7 +1,5 @@
 %% Configure paths
-addpath(genpath('~/neumapper/code/neumapper'));
-addpath(genpath('~/neumapper/code/dimReducMethods'));
-addpath(genpath('~/neumapper/code/tools'));
+addpath(genpath('~/neumapper/code/'));
 
 
 %% Load the data
@@ -13,24 +11,11 @@ labels = string(timing.task_name);
 
 %% Configure options
 options = struct();
-options.binning = 'ball';
-options.dimreduce = 'bdl_isomap';
-options.dim_embed = 3;
-options.resolution = 240;
-options.knnparam = 50;
+options.metric = 'correlation';
+options.k = 30;
+options.resolution = 400;
 options.gain = 40;
-
-options.dXtype = 'correlation';
-options.dXgeod = false;
-options.dfXtype = 'cityblock';
-options.dfXgeod = true;
-
-options.save_to = 'haxby_decoding_neumapper.mat';
-options.save_plot = 'haxby_decoding_neumapper.png';
-options.show_plot = true;
-options.show_embed = true;
-options.colors = colors;
-options.labels = labels;
+options.labels = timing.task + 1; %reindex to start from 1
 
 
 %% Run NeuMapper
