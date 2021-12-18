@@ -19,4 +19,5 @@ options.labels = timing.task + 1; %reindex to start from 1
 
 
 %% Run NeuMapper
-res = neumapper(X, options);
+[c,X_] = pca(X,'NumComponents',50); % Preprocess with PCA
+res = neumapper(X_, options);
