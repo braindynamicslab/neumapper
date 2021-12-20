@@ -19,7 +19,7 @@ timing_onehot = pd.read_csv('SBJ02_timing_onehot.tsv', sep='\t')
 
 
 ## Convert to KeplerMapper format
-membership = res.clusterBins.A
+membership = res.clusterBins
 adjacency = membership @ membership.T
 np.fill_diagonal(adjacency, 0)
 adjacency = (adjacency > 0).astype(int)

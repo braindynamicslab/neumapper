@@ -21,3 +21,8 @@ options.labels = timing.task + 1; %reindex to start from 1
 %% Run NeuMapper
 [c,X_] = pca(X,'NumComponents',50); % Preprocess with PCA
 res = neumapper(X_, options);
+
+
+%% Save outputs
+save('haxby_decoding_neumapper.mat','res');
+saveas(gcf, 'haxby_decoding_neumapper.png');

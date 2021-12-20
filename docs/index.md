@@ -61,30 +61,25 @@ the shape of data sampled from a trefoil knot.
 
 ```matlab
 %% Configure paths
-addpath(genpath('~/neumapper/code/neumapper'));
-addpath(genpath('~/neumapper/code/tools'));
+addpath(genpath('../../code/'));
 
 
 %% Load the data
 X = create_trefoil_knot(1000,'euclidean');
 
 
-%% Configure options
+%% Use default options
 options = struct();
-options.binning = 'cball';
-options.dimreduce = 'none';
-options.resolution = 100;
-options.knnparam = 8;
-options.gain = 40;
-
-options.save_to = 'trefoil_knot_neumapper.mat';
-options.save_plot = 'trefoil_knot_neumapper.png';
-options.show_plot = true;
-options.show_embed = true;
+options.resolution = 40;
 
 
 %% Run NeuMapper
 res = neumapper(X, options);
+
+
+%% Save outputs
+save('trefoil_knot_neumapper.mat','res');
+saveas(gcf, 'trefoil_knot_neumapper.png');
 ```
 
 <p align="center"><img src="./assets/trefoil_knot_neumapper.png?raw=true"></p>
@@ -136,9 +131,7 @@ Now we can simply load the data into Matlab, and run NeuMapper.
 
 ```matlab
 %% Configure paths
-addpath(genpath('~/neumapper/code/neumapper'));
-addpath(genpath('~/neumapper/code/dimReducMethods'));
-addpath(genpath('~/neumapper/code/tools'));
+addpath(genpath('../../code/'));
 
 
 %% Load the data
@@ -150,28 +143,21 @@ labels = string(timing.task_name);
 
 %% Configure options
 options = struct();
-options.binning = 'ball';
-options.dimreduce = 'bdl_isomap';
-options.dim_embed = 3;
-options.resolution = 240;
-options.knnparam = 50;
+options.metric = 'correlation';
+options.k = 30;
+options.resolution = 400;
 options.gain = 40;
-
-options.dXtype = 'correlation';
-options.dXgeod = false;
-options.dfXtype = 'cityblock';
-options.dfXgeod = true;
-
-options.save_to = 'haxby_decoding_neumapper.mat';
-options.save_plot = 'haxby_decoding_neumapper.png';
-options.show_plot = true;
-options.show_embed = true;
-options.colors = colors;
-options.labels = labels;
+options.labels = timing.task + 1; %reindex to start from 1
 
 
 %% Run NeuMapper
-res = neumapper(X, options);
+[c,X_] = pca(X,'NumComponents',50); % Preprocess with PCA
+res = neumapper(X_, options);
+
+
+%% Save outputs
+save('haxby_decoding_neumapper.mat','res');
+saveas(gcf, 'haxby_decoding_neumapper.png');
 ```
 
 <p align="center"><img src="./assets/haxby_decoding_neumapper.png?raw=true"></p>
@@ -211,7 +197,7 @@ timing_onehot = pd.read_csv('SBJ02_timing_onehot.tsv', sep='\t')
 
 
 ## Convert to KeplerMapper format
-membership = res.memberMat.A
+membership = res.clusterBins
 adjacency = membership @ membership.T
 np.fill_diagonal(adjacency, 0)
 adjacency = (adjacency > 0).astype(int)
