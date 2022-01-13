@@ -15,7 +15,7 @@ NeuMapper was designed specifically for working with complex, high-dimensional n
 
 
 
-For more details about NeuMapper see "[NeuMapper: A Scalable Computational Framework for Multiscale Exploration of the Brain's Dynamical Organization](https://doi.org/10.1162/netn_a_00229)" (Geniesse et al., 2021). For the original Mapper algorithm and related applications to neuroimaging data, see "[Generating dynamical neuroimaging spatiotemporal representations (DyNeuSR) using topological data analysis](https://www.mitpressjournals.org/doi/abs/10.1162/netn_a_00093)" (Geniesse et al., 2019) and "[Towards a new approach to reveal dynamical organization of the brain using topological data analysis](https://www.nature.com/articles/s41467-018-03664-4)" (Saggar et al., 2018). Check out this [blog post](https://braindynamicslab.github.io/blog/tda-cme-paper/) for more about the initial work that inspired the development of NeuMapper. 
+For more details about NeuMapper see "[NeuMapper: A Scalable Computational Framework for Multiscale Exploration of the Brain's Dynamical Organization](https://doi.org/10.1162/netn_a_00229)" (Geniesse et al., 2022). For the original Mapper algorithm and related applications to neuroimaging data, see "[Generating dynamical neuroimaging spatiotemporal representations (DyNeuSR) using topological data analysis](https://www.mitpressjournals.org/doi/abs/10.1162/netn_a_00093)" (Geniesse et al., 2019) and "[Towards a new approach to reveal dynamical organization of the brain using topological data analysis](https://www.nature.com/articles/s41467-018-03664-4)" (Saggar et al., 2018). Check out this [blog post](https://braindynamicslab.github.io/blog/tda-cme-paper/) for more about the initial work that inspired the development of NeuMapper. 
 
 
 
@@ -241,7 +241,7 @@ dG.visualize('haxby_decoding_neumapper_dyneusr.html')
 ## **References**
 
 If you find NeuMapper useful, please consider citing:
-> Geniesse, C., Chowdhury, S., & Saggar, M. (2021). [NeuMapper: A Scalable Computational Framework for Multiscale Exploration of the Brain's Dynamical Organization](https://doi.org/10.1162/netn_a_00229). *Network Neuroscience*, Advance publication. doi:10.1162/netn_a_00229
+> Geniesse, C., Chowdhury, S., & Saggar, M. (2022). [NeuMapper: A Scalable Computational Framework for Multiscale Exploration of the Brain's Dynamical Organization](https://doi.org/10.1162/netn_a_00229). *Network Neuroscience*, Advance publication. doi:10.1162/netn_a_00229
 
 For more information about DyNeuSR, please see:
 > Geniesse, C., Sporns, O., Petri, G., & Saggar, M. (2019). [Generating dynamical neuroimaging spatiotemporal representations (DyNeuSR) using topological data analysis](https://www.mitpressjournals.org/doi/abs/10.1162/netn_a_00093). *Network Neuroscience*, *3*(3). doi:10.1162/netn_a_00093
