@@ -17,6 +17,16 @@ For more details about NeuMapper see "[NeuMapper: A Scalable Computational Frame
 
 
 
+## **Related Projects** 
+
+- [Reciprocal Isomap](https://calebgeniesse.github.io/reciprocal_isomap) is a reciprocal variant of Isomap for robust non-linear dimensionality reduction in Python. `ReciprocalIsomap` was inspired by scikit-learn's implementation of Isomap, but the reciprocal variant enforces shared connectivity in the underlying *k*-nearest neighbors graph (i.e., two points are only considered neighbors if each is a neighbor of the other).
+
+- [Landmark Cover](https://calebgeniesse.github.io/landmark_cover) is a landmark-based cover for Mapper. `LandmarkCover` was designed for use with [KeplerMapper](https://kepler-mapper.scikit-tda.org/en/latest/), but rather than dividing an *extrinsic* space (e.g., low-dimensional projection) into overlapping hypercubes, the landmark-based approach directly partitions data points into overlapping subsets based on their *intrinsic* distances from pre-selected landmark points.
+
+- [DyNeuSR](https://braindynamicslab.github.io/dyneusr/) is a Python library for visualizing topological representations of neuroimaging data. The package combines visual web components with a high-level Python interface for interacting with, manipulating, and visualizing topological graph representations of functional brain activity.
+
+
+
 ## **Setup**
 
 ### **Dependencies**
@@ -217,16 +227,6 @@ dG.visualize('haxby_decoding_neumapper_dyneusr.html')
 
 <p align="center"><img src="https://github.com/braindynamicslab/neumapper/blob/master/examples/haxby_decoding/haxby_decoding_neumapper_dyneusr.png"></p>
 
-
-
-
-## **Related Projects** 
-
-- [DyNeuSR](https://braindynamicslab.github.io/dyneusr/) is a Python library for visualizing topological representations of neuroimaging data. The package combines visual web components with a high-level Python interface for interacting with, manipulating, and visualizing topological graph representations of functional brain activity.
-
-- [Reciprocal Isomap](https://calebgeniesse.github.io/reciprocal_isomap) is a reciprocal variant of Isomap for robust non-linear dimensionality reduction in Python. `ReciprocalIsomap` was inspired by scikit-learn's implementation of Isomap, but the reciprocal variant enforces shared connectivity in the underlying *k*-nearest neighbors graph (i.e., two points are only considered neighbors if each is a neighbor of the other).
-
-- [Landmark Cover](https://calebgeniesse.github.io/landmark_cover) is a landmark-based cover for Mapper. `LandmarkCover` was designed for use with [KeplerMapper](https://kepler-mapper.scikit-tda.org/en/latest/), but rather than dividing an *extrinsic* space (e.g., low-dimensional projection) into overlapping hypercubes, the landmark-based approach directly partitions data points into overlapping subsets based on their *intrinsic* distances from pre-selected landmark points.
 
 
 
