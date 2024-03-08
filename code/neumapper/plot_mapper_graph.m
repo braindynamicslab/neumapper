@@ -143,7 +143,7 @@ node_colors = zeros(nn,3);
 smallBin_sizes = cellfun('size',smallBins,2);
 %max_size = max(smallBin_sizes);
 %node_sizes = 5+log(1+smallBin_sizes);
-node_sizes = 1+log(1+smallBin_sizes);
+node_sizes = 5+log(1+smallBin_sizes);
 
 %% Plot the graph and highlight nodes
 for ii = 1:nn
